@@ -1,0 +1,28 @@
+<div style="margin:50px;">
+	<h1>Create User</h1>
+	<%= form_tag create_users_path do %>
+		<%= text_field_tag :name, nil, placeholder: "Your Name" %><br />
+		<%= text_field_tag :age, nil, placeholder: "Your Age" %><br />
+		<%= submit_tag "Create Profile" %>
+	<% end -%>
+</div>
+
+<p><%= Link to "All Users" users_path %></p>
+
+<!-- index.html.erb -->
+
+
+
+<!-- form_tag for Users -->
+
+<div style="margin:50px;">
+    <h3>Create a Product</h3>
+    <%= form_for @product do |f| %>
+	<%= f.text_field :name, placeholder: "Product Name" %><br />
+	<%= f.number_field :price, placeholder: "Enter Price", step: :any %><br />
+	<%= f.number_field :quantity, placeholder: "Enter Quantity" %><br />
+	<%= f.submit "Create User" %>
+    <% end %>
+</div>
+
+<p><%= Link to "All Products" products_path %></p>
